@@ -1,5 +1,5 @@
 {
-  "name": "instantiation-di-prototype",
+  "name": "i11n-di",
   "scripts": {
     "test": "yarn jest > test.log"
   },

@@ -1,4 +1,6 @@
-# instantiation-di-prototype
+# I11n-DI "Instantiation DI"
+
+> This is a standalone prototype for testing I11n-DI before settling it into Nodalis.
 
 <!-- `find . -wholename "./sources/*.d.ts" -type f -delete` -->
 
@@ -93,9 +95,9 @@ instantiationService.createInstance(CodeApplication, ...).startup();
 
 **Invoking services**
 
-If you need to do some initial setup before you create your final application instance, you can use `invokeFunction` with an asynchronous callback to access any services you've registered in the service collection. Let's take a look at Code's startup invocation. 
+If you need to do some initial setup before you create your final application instance, you can use `invokeFunction` with an asynchronous callback to access any services you've registered in the service collection. Let's take a look at Code's startup invocation.
 
-*Assume all services have been added by `services.set()` prior to invocation and startup.*
+_Assume all services have been added by `services.set()` prior to invocation and startup._
 
 ```ts
 await instantiationService.invokeFunction(async accessor => {
