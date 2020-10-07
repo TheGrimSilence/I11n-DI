@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "di/*": ["sources/*"]
+    },
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["ES2016", "DOM"],
+    "types": ["node", "jest"],
+    "downlevelIteration": true,
+    "module": "commonjs",
+    "sourceMap": false,
+    "noImplicitReturns": true,
+    "noImplicitAny": false,
+    "strict": false,
+    "strictNullChecks": true,
+    "target": "es2018",
+    "declaration": true,
+    "noUnusedLocals": true,
+    "importHelpers": false,
+    "isolatedModules": false,
+    "skipLibCheck": true,
+    "resolveJsonModule": true
+  }
+}
