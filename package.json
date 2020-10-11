@@ -1,7 +1,7 @@
 {
   "name": "i11n-di",
   "description": "A simple dependency injection system torn from Visual Studio Code and modified for versatility. Experimental at best.",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "scripts": {
     "test": "yarn jest > test.log",
     "build": "rm -rf dist; yarn webpack"
