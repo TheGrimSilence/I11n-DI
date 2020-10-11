@@ -8,7 +8,7 @@ import { ServiceIdentifier } from '../ServiceIdentifier';
 import { Trace } from '../tracing/Trace';
 import { Ctor, getServiceDependencies } from '../util';
 
-export default class InstantiationService implements IInstantiationService {
+export class InstantiationService implements IInstantiationService {
   declare readonly _serviceBrand: undefined;
 
   constructor(

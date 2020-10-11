@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "di/*": ["sources/*"]
     },
@@ -19,11 +19,17 @@
     "strict": false,
     "strictNullChecks": true,
     "target": "es2018",
+    "outDir": "dist",
     "declaration": true,
     "noUnusedLocals": true,
     "importHelpers": false,
     "isolatedModules": false,
     "skipLibCheck": true,
-    "resolveJsonModule": true
-  }
+    "resolveJsonModule": true,
+    "plugins": [
+      { "transform": "typescript-transform-paths" },
+      { "transform": "typescript-transform-paths", "afterDeclarations": true }
+    ]
+  },
+  "exclude": ["sources/test", "dist", "webpack.config.ts"]
 }

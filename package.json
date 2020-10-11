@@ -1,8 +1,23 @@
 {
   "name": "i11n-di",
+  "description": "A simple dependency injection system torn from Visual Studio Code and modified for versatility. Experimental at best.",
+  "version": "0.2.2",
   "scripts": {
-    "test": "yarn jest > test.log"
+    "test": "yarn jest > test.log",
+    "build": "rm -rf dist; yarn webpack"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thegrimsilence/i11n-di.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/main.js",
+    "types": "dist/main.d.ts"
+  },
+  "files": [
+    "dist/"
+  ],
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.0.5",
     "@types/eslint": "^7",
@@ -12,6 +27,7 @@
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",
     "@yarnpkg/pnpify": "^2.2.1",
+    "declaration-bundler-webpack-plugin": "^1.0.3",
     "eslint": "^7.10.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-import-resolver-typescript": "^2.3.0",
@@ -21,7 +37,13 @@
     "jest-environment-node": "^26.5.2",
     "sinon": "^9.2.0",
     "ts-jest": "^26.4.1",
+    "ts-loader": "^8.0.4",
     "ts-node": "^9.0.0",
-    "typescript": "^4.0.3"
+    "tsconfig-paths-webpack-plugin": "^3.3.0",
+    "ttypescript": "^1.5.12",
+    "typescript": "^4.0.3",
+    "typescript-transform-paths": "^2.0.1",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0"
   }
 }
