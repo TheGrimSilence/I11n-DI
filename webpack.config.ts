@@ -8,8 +8,11 @@ export default {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        loader: 'ts-loader',
         exclude: [resolve(__dirname, 'webpack.config.ts')],
+        options: {
+          compiler: 'ttypescript',
+        },
       },
     ],
   },
