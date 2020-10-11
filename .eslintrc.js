@@ -12,7 +12,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'sort-class-members'],
+  plugins: ['@typescript-eslint', 'sort-class-members', 'prettier'],
   rules: {
     indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
@@ -24,5 +24,6 @@ module.exports = {
     ],
     '@typescript-eslint/no-non-null-assertion': 0,
     '@typescript-eslint/no-empty-function': 0,
+    'prettier/prettier': 'error',
   },
 };

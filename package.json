@@ -21,6 +21,7 @@
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.0.5",
     "@types/eslint": "^7",
+    "@types/eslint-plugin-prettier": "^3",
     "@types/jest": "^26.0.14",
     "@types/node": "^14.11.5",
     "@types/sinon": "^9",
@@ -32,6 +33,7 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-import-resolver-typescript": "^2.3.0",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-sort-class-members": "^1.8.0",
     "jest": "^26.5.2",
     "jest-environment-node": "^26.5.2",
