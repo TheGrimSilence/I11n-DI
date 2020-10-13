@@ -8,6 +8,11 @@ import { ServiceIdentifier } from '../ServiceIdentifier';
 import { Trace } from '../tracing/Trace';
 import { Ctor, getServiceDependencies } from '../util';
 
+/**
+ * A Dependency Injection container which also acts as an Injectable allowing
+ * for automated instantiation at runtime, and idling services that support
+ * delayed instantiation.
+ */
 export class InstantiationService implements IInstantiationService {
   declare readonly _serviceBrand: undefined;
 
