@@ -4,7 +4,7 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import InstantiationService from '../service/InstantiationService';
+import { InstantiationService } from '../service/InstantiationService';
 import { ServiceCollection } from '../ServiceCollection';
 import { ServiceIdentifier } from '../ServiceIdentifier';
 import * as sinon from 'sinon';

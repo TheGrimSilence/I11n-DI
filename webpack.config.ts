@@ -1,7 +1,7 @@
 import { resolve } from 'path';
+import { Options as TsLoaderOptions } from 'ts-loader';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
 import { Configuration } from 'webpack';
-import { Options as TsLoaderOptions } from 'ts-loader';
 
 export default {
   entry: resolve(__dirname, 'sources', 'main.ts'),
@@ -16,6 +16,7 @@ export default {
           compilerOptions: {
             removeComments: false,
           },
+          configFile: resolve(__dirname, 'tsconfig.build.json'),
         } as TsLoaderOptions,
       },
     ],
@@ -24,7 +25,6 @@ export default {
     filename: 'main.js',
     path: resolve(__dirname, 'dist'),
   },
-  plugins: [],
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
     plugins: [
