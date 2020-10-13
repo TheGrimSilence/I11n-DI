@@ -9,7 +9,7 @@ import { SyncDescriptor } from '../descriptors';
 import { createDecorator } from '../decorators/createDecorator';
 import { optional } from '../decorators/optional';
 import { ServiceCollection } from '../ServiceCollection';
-import InstantiationService from '../service/InstantiationService';
+import { InstantiationService } from '../service/InstantiationService';
 import { _testNaming } from '../tracing/Trace';
 
 const IService1 = createDecorator<IService1>('service1');
@@ -67,6 +67,7 @@ class DependentService implements IDependentService {
 }
 
 class Service1Consumer {
+  greeting() {}
   constructor(@IService1 service1: IService1) {
     assert.ok(service1);
     assert.strictEqual(service1.c, 1);
@@ -159,7 +160,7 @@ describe('Instantiation Service ::', () => {
   const test3 = '@Param - simple class';
   test(test3, function () {
     const collection = new ServiceCollection();
-    const service = new InstantiationService(collection);
+    const service: IInstantiationService = new InstantiationService(collection);
     collection.set(IService1, new Service1());
     collection.set(IService2, new Service2());
     collection.set(IService3, new Service3());
