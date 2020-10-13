@@ -13,6 +13,7 @@ Cheers!
 - [x] Is based on decorators.
 - [x] Is unobtrusive (no god damn manual `.bind` bullshit!).
 - [ ] Is capable of supporting multiple injection methods (Class decorators, constructor injectors, etc...).
+- [ ] Accurately type-safe without extensive workarounds or need for direct interfacing.
 
 ---
 
@@ -87,7 +88,9 @@ service.set(IFileService, fileService)
 services.set(ILifecycleMainService, new SyncDescriptor(LifecycleMainService));
 
 // We instantiate I11n-DI and pass our services, and set it to strict.
-const instantiationService = new InstantiationService(services, true);
+// Use the interface to immediately become type safe, and your IDE will tell you
+// about the `startup()` when creating your instance below.
+const instantiationService: IInstantiationService = new InstantiationService(services, true);
 // Here we create our CodeApplication, and pass any args it requires other than services.
 // I11n-DI will take care of the services for us.
 instantiationService.createInstance(CodeApplication, ...).startup();
