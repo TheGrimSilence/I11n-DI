@@ -18,10 +18,7 @@ module.exports = {
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
-    '@typescript-eslint/no-explicit-any': [
-      1,
-      { ignoreRestArgs: true, fixToUnknown: true },
-    ],
+    '@typescript-eslint/no-explicit-any': 0,
     '@typescript-eslint/no-non-null-assertion': 0,
     '@typescript-eslint/no-empty-function': 0,
     'prettier/prettier': 'error',
