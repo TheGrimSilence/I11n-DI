@@ -11,6 +11,7 @@
     "forceConsistentCasingInFileNames": true,
     "lib": ["ES2016", "DOM"],
     "types": ["node", "jest"],
+    "removeComments": false,
     "downlevelIteration": true,
     "module": "commonjs",
     "sourceMap": false,

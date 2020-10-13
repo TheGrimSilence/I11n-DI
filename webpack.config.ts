@@ -1,6 +1,7 @@
 import { resolve } from 'path';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
 import { Configuration } from 'webpack';
+import { Options as TsLoaderOptions } from 'ts-loader';
 
 export default {
   entry: resolve(__dirname, 'sources', 'main.ts'),
@@ -12,7 +13,10 @@ export default {
         exclude: [resolve(__dirname, 'webpack.config.ts')],
         options: {
           compiler: 'ttypescript',
-        },
+          compilerOptions: {
+            removeComments: false,
+          },
+        } as TsLoaderOptions,
       },
     ],
   },
