@@ -11,7 +11,7 @@ export class IdleService<T> {
   private readonly _handle: IDisposable;
   private _didRun = false;
   private _value: T;
-  private _error: unknown;
+  private _error: any;
 
   constructor(executor: () => T) {
     this._executor = () => {

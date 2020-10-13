@@ -25,7 +25,7 @@ export class InstantiationService implements IInstantiationService {
 
   createInstance<T>(
     ctorOrDescriptor: any | SyncDescriptor<T>,
-    ...rest: unknown[]
+    ...rest: any[]
   ): T | SyncDescriptor<T> {
     let trace: Trace<T>;
     let result: T;
@@ -47,7 +47,7 @@ export class InstantiationService implements IInstantiationService {
     return result;
   }
 
-  public invokeFunction<T, TS extends unknown[] = []>(
+  public invokeFunction<T, TS extends any[] = []>(
     fn: (accessor: ServicesAccessor, ...args: TS) => T,
     ...args: TS
   ): T {
@@ -81,13 +81,13 @@ export class InstantiationService implements IInstantiationService {
 
   private _createInstance<T>(
     ctor: Ctor<T>,
-    args: unknown[] = [],
+    args: any[] = [],
     trace: Trace<T>
   ): T {
     const serviceDependencies = getServiceDependencies(ctor).sort(
       (a, b) => a.index - b.index
     );
-    const serviceArgs: unknown[] = [];
+    const serviceArgs: any[] = [];
 
     for (const dependency of serviceDependencies) {
       const service = this._getOrCreateServiceInstance(dependency.id, trace);
@@ -225,7 +225,7 @@ export class InstantiationService implements IInstantiationService {
   private _createServiceWithOwner<T>(
     id: ServiceIdentifier<T>,
     ctor: new (...args: any[]) => T,
-    args: unknown[] = [],
+    args: any[] = [],
     supportsDelayedInstantiation: boolean,
     trace: Trace<T>
   ): T {
@@ -249,7 +249,7 @@ export class InstantiationService implements IInstantiationService {
 
   private _setServiceInstance<T>(
     id: ServiceIdentifier<T>,
-    svcInstance: unknown
+    svcInstance: any
   ): void {
     if (this._services.get(id) instanceof SyncDescriptor)
       this._services.set(id, svcInstance);
@@ -259,7 +259,7 @@ export class InstantiationService implements IInstantiationService {
 
   private _createService<T>(
     ctor: Ctor<T>,
-    args: unknown[] = [],
+    args: any[] = [],
     supportsDelayedInstantiation: boolean,
     trace: Trace<T>
   ): T {
@@ -283,7 +283,7 @@ export class InstantiationService implements IInstantiationService {
 
           return prop;
         },
-        set(_target: T, key: PropertyKey, value: unknown): boolean {
+        set(_target: T, key: PropertyKey, value: any): boolean {
           idle.value[key] = value;
 
           return true;

@@ -101,6 +101,11 @@ export interface IInstantiationService {
     a8: A8
   ): T;
 
+  // createInstance<T, A extends unknown[] = []>(
+  //   descriptor: descriptors.SyncDescriptor<T>,
+  //   ...args: [...A]
+  // ): T;
+
   createInstance<
     TCtor extends new (...args: any[]) => any,
     R extends InstanceType<TCtor>
@@ -112,7 +117,7 @@ export interface IInstantiationService {
   /**
    * Using an accessor, allows calling on service instances for use.
    */
-  invokeFunction<T, A extends unknown[] = []>(
+  invokeFunction<T, A extends any[] = []>(
     fn: (accessor: ServicesAccessor, ...args: A) => T,
     ...args: A
   ): T;
