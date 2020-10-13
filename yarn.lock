@@ -1878,6 +1878,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/prettier@npm:^2":
+  version: 2.1.2
+  resolution: "@types/prettier@npm:2.1.2"
+  checksum: fbb0284ae165940e2d236d985477a3a7bf0215b5d32fe6dcb8b2cc80a7661ba52ce494ef73301c79b8eb315df27094f5529984f7b68e70c8cb1d451d0147031c
+  languageName: node
+  linkType: hard
+
 "@types/prettier@npm:^2.0.0":
   version: 2.1.1
   resolution: "@types/prettier@npm:2.1.1"
@@ -5517,6 +5524,7 @@ fsevents@^2.1.2:
     "@types/eslint-plugin-prettier": ^3
     "@types/jest": ^26.0.14
     "@types/node": ^14.11.5
+    "@types/prettier": ^2
     "@types/sinon": ^9
     "@typescript-eslint/eslint-plugin": ^4.3.0
     "@typescript-eslint/parser": ^4.3.0
@@ -5530,6 +5538,7 @@ fsevents@^2.1.2:
     eslint-plugin-sort-class-members: ^1.8.0
     jest: ^26.5.2
     jest-environment-node: ^26.5.2
+    prettier: ^2.1.2
     sinon: ^9.2.0
     ts-jest: ^26.4.1
     ts-loader: ^8.0.4
@@ -8188,6 +8197,15 @@ fsevents@^2.1.2:
   dependencies:
     fast-diff: ^1.1.2
   checksum: 6d698b9c8dc28e52c8d69df520cde3410cc06cc40471acf81b4b7c18ca08e73d0efb0f878654985bb02fce4f8d3d64cdf64fe9f3ffad3e1dc7e17b837d4ddcb2
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "prettier@npm:2.1.2"
+  bin:
+    prettier: bin-prettier.js
+  checksum: bedc24c568efbcfe45f255558900777e2fabb36bf28ed4c22d2456eb22dfb012d12e566a46472ea5b857a4e9f263e888f7e316527d00bb58188f1820b0b0031a
   languageName: node
   linkType: hard
 
